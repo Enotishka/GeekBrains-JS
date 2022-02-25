@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Homework</title>
+  </head>
+  <body>
+    <!--
+Обязательное задание.
+
+Необходимо реализовать четыре функции, каждая функция должна принимать по два
+числа и выполнять одну из операций (каждая функция выполняет одну из них):
+1. Сложение
+2. Разность
+3. Умножение
+4. Деление
+
+Необходимо сделать так, чтобы функция вернула число, например выражение
+`console.log(sum(2, 6));` должно вывести число 8 в консоль (sum - функция
+сложения в данном примере, ваши названия функций могут отличаться).
+
+Округлять значения, которые возвращают функции не нужно, однако, обратите
+внимание на разность, функция должна вычесть из большего числа меньшее, либо
+вернуть 0, если числа равны.
+
+Функциям всегда передаются корректные числа, проверки на NaN, Infinity делать
+не нужно.
+
+Необходимо для всех функций прописать комментарии jsdoc https://jsdoc.app/.
+-->
+    <script>
+      "use strict";
+
+      /**
+       * Function sums two values.
+       * @param {number} a - First value.
+       * @param {number} b - Second value.
+       * @returns {number} - Sum of a and b.
+       */
+      function sum(a, b) {
+        return a + b;
+      }
+
+      /**
+       * Function subtracts another from one number.
+       * @param {number} a - First value.
+       * @param {number} b - Second value.
+       * @returns {number} - Returns the difference between a and b.
+       */
+      function diff(a, b) {
+        if (a > b) {
+          return a - b;
+        } else {
+          return b - a;
+        }
+      }
+
+      /**
+       * Function multiplies two values.
+       * @param {number} a - First value.
+       * @param {number} b - Second value.
+       * @returns {number} - Returns the product of a and b.
+       */
+      function mul(a, b) {
+        return a * b;
+      }
+
+      /**
+       * Function divides one number by another.
+       * @param {number} a - First value.
+       * @param {number} b - Second value.
+       * @returns {number} - Returns the result of a division.
+       */
+      function div(a, b) {
+        return a / b;
+      }
+
+      console.log(sum(2, 6));
+      console.log(diff(2, 6));
+      console.log(mul(2, 6));
+      console.log(div(2, 6));
+    </script>
+  </body>
+</html>
